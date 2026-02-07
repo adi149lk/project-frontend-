@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>nav</title>
+    <style>
+        .box1 {
+            box-shadow: inset #181616 -10px -7px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="logo" id="logo" class="a">amazon.com</a>
+            <a href="" class="a">account</a>
+            <a href="" class="a">my account</a>
+            <a href="" class="a">contact us</a>
+            <span class="a">
+                <input type="search" placeholder="search amazon">
+                <button>search</button>
+            </span>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box1 box" style="background-color:rgb(13, 0, 255);">box1</div>
+        <div class="box2 box" style="background-color:red">box2</div>
+        <div class="box3 box" style="background-color:rgb(11, 194, 50)">box3</div>
+        <div class="box4 box" style="background-color:rgb(15, 160, 212)">box4</div>
+        <div class="box4 box s" style="background-color:rgb(15, 160, 212)">box4</div>
+        <div class="box4 box s" style="background-color:rgb(15, 160, 212)">box4</div>
+        <div class="box4 box  s" style="background-color:rgb(15, 160, 212)">box4</div>
+        <div class="box4 box s" style="background-color:rgb(15, 160, 212)">box4</div>
+    </div><br><br><br>
+    <video src="Viswasam_2019_Uncut_Hindi_Dubbed_Full_Movie_HDRip.mp4" controls></video>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aqua;
+    line-height: 2rem;
+}
+body{
+    background-color: #548587;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    text-align: center;
+}
+#a{
+     height: 190px;
+    width: 190px;
+    border-radius: 15rem;
+}
+#b{
+ height: 5cm;
+ width: 5cm;
+ border-radius: 8rem;
+}
+#c{
+    height: 190px;
+    width: 190px;
+border-radius: 10rem;
+}
+.cn{
+    margin: 5rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+    
+}
+.u:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.score{
+    display:flex;
+justify-content: center;
+font-size: 2rem;
+    margin-top:3rem ;
+    gap: 5rem;
+}
+#user,#comp{
+    font-size: 4rem;
+}
+.msg{
+    margin-top: 5rem;
+}
+
+#mssg{
+    background-color: #081b31;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline;
+}
+    

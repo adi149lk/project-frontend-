@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-list</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1>TODO LIST</h1>
+    </div>
+
+    <div class="row">
+      <div class="input"> <input type="text" placeholder="todo" id="todo"></div>
+      <div class="input"> <input type="date" placeholder="date" id="date"></div>
+      <div class="input button"> <button class="btn" style="background-color: green;" onclick="clicked();">ADD</button>
+      </div>
+    </div>
+    <div class="items">
+
+    </div>
+
+
+  </div>
+  <script>
+    let todo = document.querySelector("#todo");
+    let date = document.querySelector("#date");
+    let inner = document.querySelector(".items");
+    let arr = localStorage.getItem('arr') ? JSON.parse(localStorage.getItem('arr')) : [];
+    if (arr.length !== 0) {
+      display();
+    }
+    let delet = (index) => {
+      arr.splice(index, 1);
+      localStorage.setItem('arr', JSON.stringify(arr));
+      display();
+    }
+
+    function clicked() {
+
+      let item = {
+        date: date.value,
+        todo: todo.value
+      };
+      arr.push(item);
+      localStorage.setItem('arr', JSON.stringify(arr));
+      todo.value = '';
+      date.value = '';
+
+      display();
+    }
+
+
+    function display() {
+      inner.innerHTML = '';
+      arr.forEach((el, index) => {
+
+        inner.innerHTML = inner.innerHTML + `<div class="row">
+      <div class="input"> <span>${el.todo}</span></div>
+            <div class="input"> <span>${el.date}</span> </div>
+            <div class="input button"> <button class="btn" style="background-color: red;" onclick="delet(${index})">Delete</button></div></div>
+      `
+
+
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAME</title>
+  <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="j">
+      <div class="head">
+        Play your move
+      </div>
+      <div class="inner">
+        <button style="background-color:rgb(211, 132, 132);" onclick="
+var cmchoices=cmputerChoice();
+var resultMsg=result('bat',cmchoices);
+
+showResult('bat',cmchoices,resultMsg);
+
+      ">bat</button>
+        <button style="background-color: red;" onclick="
+   cmchoices=cmputerChoice();
+ resultMsg=result('ball',cmchoices);
+ 
+showResult('ball',cmchoices,resultMsg);
+    
+    ">ball</button>
+        <button onclick="
+     cmchoices=cmputerChoice();
+ resultMsg=result('stumps',cmchoices);
+ 
+showResult('stumps',cmchoices,resultMsg);
+    
+    ">stumps</button>
+        <button style="background-color: green;"
+        onclick="localStorage.clear();reset();showResult('','','');">reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="con">
+    <div class="">
+      <div class="head">
+    <h1 id="u-choice"></h1>
+    <h1 id="c-choice"></h1>
+    </div>
+    <div class="inner">
+    <h1 id="f-result"></h1>
+    <h1 id="score"></h1>
+    </div>
+    </div>
+  </div>
+  <script>
+   
+     let s=localStorage.getItem('data');
+     let score;
+     reset(s);
+     function reset(s){
+        score=s?JSON.parse(s):{ win:0 ,
+      lost: 0,
+      tie: 0,
+      
+
+     };
+   
+    score.displayScore= function () {
+        
+       
+        const { win, lost, tie } = score;
+
+
+        return`win: ${win},lost:${lost} tie:${tie}`;
+     
+        
+
+      }
+
+     }
+   
+    function cmputerChoice() {
+      let cmchoice;
+      let random = Math.random() * 3;
+      if (random >=0 && random <= 1) {
+        cmchoice = 'bat';
+      }
+      if (random > 1 && random <= 2) {
+        cmchoice = 'ball';
+      }
+      if (random > 2 && random <= 3) {
+        cmchoice = 'stumps';
+      }
+      return cmchoice;
+    }
+    function result(userChoice, cmchoice) {
+      if (userChoice === 'bat') {
+        if (cmchoice === 'bat') {
+          score.tie++;
+          return `it's tie`;
+
+        }
+        else if (cmchoice === 'ball') {
+          score.win++;
+          return `user won`;
+
+        }
+        else {
+          score.lost++;
+          return `computer won`;
+
+        }
+      }
+      else if (userChoice === 'ball') {
+        if (cmchoice === 'bat') {
+          score.lost++;
+          return `computer won`;
+
+
+        }
+        else if (cmchoice === 'ball') {
+          score.tie++;
+          return `it's tie`;
+
+        }
+        else {
+          score.win++;
+          return `user won`;
+
+        }
+      }
+      else {
+        if (cmchoice === 'bat') {
+          score.win++;
+          return `user won`;
+
+        }
+        else if (cmchoice === 'ball') {
+          score.lost++;
+          return `comp won`;
+
+        }
+        else {
+          score.tie++;
+          return `it.s a tie`;
+
+        }
+      }
+
+    }
+    function showResult(userChoice,cmputerChoice,result){
+      localStorage.setItem('data',JSON.stringify(score));
+      if(userChoice!==''){
+      document.querySelector('#u-choice').innerText=`your choice is ${userChoice}`;
+      document.querySelector('#c-choice').innerText=`computer choice is ${cmputerChoice}`;
+      document.querySelector('#f-result').innerText=`${result}`;
+      }
+      else{
+        document.querySelector('#u-choice').innerText=``;
+      document.querySelector('#c-choice').innerText=``;
+      document.querySelector('#f-result').innerText=``;
+
+      }
+      document.querySelector('#score').innerText=`${score.displayScore()}`;
+      
+
+    }
+    
+
+  </script>
+
+</body>
+
+</html>

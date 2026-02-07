@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cal.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- calculator structure -->
+    <div class="container">
+      <div class="display"></div>
+      <div class="inner-container">
+        <div class="line row1">
+          <div
+            class="num"
+            onclick="
+             currentValue+='1';
+           y.innerText=currentValue;"
+          >
+            <span>1</span>
+          </div>
+
+          <div
+            class="num"
+            onclick="
+             currentValue+='2';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>2</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='3';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>3</span>
+          </div>
+        </div>
+        <div class="line row2">
+          <div
+            class="num"
+            onclick="
+             currentValue+='4';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>4</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='5';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>5</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='6';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>6</span>
+          </div>
+        </div>
+        <div class="line row3">
+          <div
+            class="num"
+            onclick="
+             currentValue+='7';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>7</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='8';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>8</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='9';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>9</span>
+          </div>
+        </div>
+        <div class="line row4">
+          <div
+            class="num"
+            onclick="
+             currentValue+='0';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>0</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='+';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>+</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='-';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>-</span>
+          </div>
+        </div>
+        <div class="line row5">
+          <div
+            class="num"
+            onclick="
+             currentValue+='/';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>/</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='*';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>*</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+             currentValue+='%';
+           y.innerText=currentValue;
+                                "
+          >
+            <span>%</span>
+          </div>
+        </div>
+        <div class="line row6">
+          <div
+            class="num"
+            onclick="
+               y.innerText=currentValue?eval(currentValue):'';
+            currentValue=''
+      
+        
+                                "
+          >
+            <span>=</span>
+          </div>
+          <div
+            class="num"
+            onclick="
+            currentValue='';
+             
+           y.innerText='';
+                                "
+          >
+            <span>C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let currentValue = "";
+
+      let y = document.querySelector(".display");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+
+}
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: azure;
+}
+.container{
+  background-color: white;
+  width: 25vw;
+  height: 80vh;
+  color: black;
+  margin-top:100px ;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+border-radius: 3px;
+
+}
+.display{
+  width: 70%;
+  height: 10%;
+  border: 2px solid black;
+  font-size: 30px;
+  font-weight: 700;
+}
+.inner-container{
+   width: 60%;
+  height: 70%;
+ border: 1px solid lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.line{
+  width: 90%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.num{
+  width: 25%;
+  height: 90%;
+  border: 1px solid black;
+  margin: 3px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.num:hover{
+  cursor: pointer;
+}
+.num span {
+  font-size: 40px;
+  font-weight: 700px;
+}

@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(3, 3, 43);
+  color: honeydew;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 38px;
+  background-color: rgb(40, 68, 226);
+}
+
+.left {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+main hr {
+  border: 0;
+  height: 1.2px;
+  background-color: rgb(6, 6, 225);
+  margin: 40px 8px;
+}
+
+.first {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.first > div {
+  width: 30%;
+}
+
+.leftSction {
+  font-size: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#element {
+  color: rgb(125, 10, 233);
+}
+.button{
+  margin-top: 25px;
+}
+.button button{
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: white
+}
+.button button:hover{
+  cursor: pointer;
+  border: 2px solid  brown;
+}
+.rightSection {
+}
+
+.rightSection img {
+  width: 100%;
+}
+
+.purple {
+  color: rgb(125, 10, 233);
+}
+
+.text-grey {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: rgb(0, 179, 255);
+}
+
+.second {
+  max-width: 80vw;
+  margin: auto;
+  height: 80vh;
+}
+
+.second h1 {
+  font-size: 1.9rem;
+}
+
+.second .box {
+  background-color: white;
+  width: 80vw;
+  height: 2px;
+  display: flex;
+  margin: 90px 0;
+}
+
+.vertical {
+  background-color: white;
+  margin: 0 90px;
+  height: 70px;
+  width: 1px;
+}
+
+.img-top {
+  position: relative;
+  top: -74px;
+  left: -49px;
+  width: 115px;
+}
+
+.vertcal-title {
+  position: relative;
+  top: 10px;
+  left: -19px;
+  width: 150px;
+}
+
+.vertical-desc {
+  position: relative;
+  top: 16px;
+  left: -19px;
+  width: 150px;
+  color: blanchedalmond;
+  font-size: 9px;
+}
+
+footer {
+  background-color: #070931;
+  
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 38px 100px;
+}
+
+.footer ul li {
+  list-style: none;
+}
+footer .footer-text {
+  text-align: center;
+  padding: 10px;
+  color: gray;
+}
+
